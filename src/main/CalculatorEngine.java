@@ -4,7 +4,7 @@ public class CalculatorEngine {
         ADD, SUBTRACT, MULTIPLY, DIVIDE
     }
 
-    private double currentTotal;
+    double currentTotal;
 
     public String getTotalString() {
         return currentTotal % 1.0 == 0
@@ -52,19 +52,19 @@ public class CalculatorEngine {
         }
     }
 
-    private void add(double number) {
+    void add(double number) {
         currentTotal += number % 1.0 == 0 ? (int) number : number;
     }
 
-    private void subtract(double number) {
+    void subtract(double number) {
         currentTotal -= number % 1.0 == 0 ? (int) number : number;
     }
 
-    private void multiply(double number) {
+    void multiply(double number) {
         currentTotal *= number % 1.0 == 0 ? (int) number : number;
     }
 
-    private void divide(double number) {
+    void divide(double number) {
         currentTotal /= number % 1.0 == 0 ? (int) number : number;
     }
 

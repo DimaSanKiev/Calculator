@@ -11,7 +11,7 @@ public class CalculatorView extends JFrame {
     // Variables for calculator's state
     private boolean startNumber = true;                         // expecting number, not operation
     private String prevOperation = "=";                         // previous operation
-    private CalculatorEngine engine = new CalculatorEngine();   // reference to CalculatorEngine
+    private CalculatorEngine engine = new CalculatorEngine();   // reference to main.CalculatorEngine
     ActionListener operationListener = new OperationListener(); // one operation listener for all operations
 
     public CalculatorView() {
@@ -26,7 +26,7 @@ public class CalculatorView extends JFrame {
         // Windows settings
         setPreferredSize(new Dimension(320, 300));
         setResizable(false);
-        setTitle("Simple Calculator");
+        setTitle("Simple main.Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
