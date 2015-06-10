@@ -1,28 +1,23 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
 
 public class CalculatorEngineTest {
 
-    CalculatorEngine calcEngine = new CalculatorEngine();
+    private CalculatorEngine calcEngine = new CalculatorEngine();
+    private CalculatorView calcView = new CalculatorView();
 
     @Before
     public void runBeforeEveryTest() {
+//        calcView.actionClear();
         calcEngine.currentTotal = 0;
     }
 
     @Test
     public void testGetTotalStringInt() throws Exception {
         calcEngine.currentTotal = 50;
-        assertTrue(calcEngine.currentTotal % 1.0 == 0);
-    }
-
-    @Test
-    public void testGetTotalStringDouble() throws Exception {
-        calcEngine.equal("50.5");
-        assertTrue(calcEngine.currentTotal % 1.0 != 0);
+        assertEquals(50, calcEngine.currentTotal, 1e-6);
     }
 
     @Test

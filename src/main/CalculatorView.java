@@ -95,7 +95,7 @@ public class CalculatorView extends JFrame {
     }
 
 
-    private void actionClear() {
+    void actionClear() {
         startNumber = true;
         display.setText("0");
         prevOperation = "=";
